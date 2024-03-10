@@ -41,6 +41,24 @@ except -> ocorreu algum erro ao tentar executar
 # https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions
 
 try:
-    ...
-except:
-    ...
+    print('ABRIR O ARQUIVO')
+    8/0
+except ZeroDivisionError as e:
+    print('----------------------')
+    print(e.__class__.__name__)
+    print('----------------------')
+    print(e)
+    print('----------------------')
+    print('N pode dividir numero com zero')
+    
+except IndexError as erro:
+    print('IndexError')
+    
+except (NameError, ImportError):
+    print('NameError, ImportError')
+    
+else:
+    print('N deu erro')
+    
+finally:
+    print('FECHEI O ARQUIVO')
