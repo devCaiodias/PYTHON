@@ -9,6 +9,13 @@
 # print(variavel)
 # print(nova_var)
 
-from moduloo3.m3 import fala_oi
+# from moduloo3.m3 import fala_oi
 
-print(__name__)
+# print(__name__)
+# fala_oi()
+
+import moduloo3
+
+print(moduloo3.nova_var)
+print(moduloo3.soma_do_modulo(2,3))
+
