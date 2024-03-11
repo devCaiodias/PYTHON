@@ -16,5 +16,11 @@
 # import modulo_python
 
 import modulo_m
+from modulo_m import soma, variavel_modulo
 
 print(f'Esse modulo se chama {__name__}')
+# print(variavel_modulo)
+print(modulo_m.variavel_modulo)
+
+# print(soma(2,1))
+print(modulo_m.soma(2,1))
