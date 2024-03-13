@@ -77,11 +77,6 @@ almentar_dez_porcento = partial(
     amentar_porcentagem,
     porcentagem=1.1
 )
-    
-# novos_produtos = [
-#     {**p, 'preco' : almentar_dez_porcento(p['preco'])}
-#     for p in produtos
-# ]
 
 def muda_preco_de_produto(produto):
     return {**produto, 'preco' : almentar_dez_porcento(produto['preco'])}
@@ -90,7 +85,6 @@ novos_produtos = map(
     muda_preco_de_produto,
     produtos
 )
-# novos_produtos =(x for x in produtos)
 
 print_iter(produtos)
 print_iter(novos_produtos)
