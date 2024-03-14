@@ -8,17 +8,27 @@
 # - fatorial - n! = 5! = 5 * 4 * 3 * 2 * 1 = 120
 # https://brasilescola.uol.com.br/matematica/fatorial.htm
 
-def recursiva(inicio =0, fim = 10):
-    # Caso Basico
-    if inicio >= fim:
-        return fim
+# def recursiva(inicio =0, fim = 10):
+#     # Caso Basico
+#     if inicio >= fim:
+#         return fim
     
-    print(inicio, fim)
+#     print(inicio, fim)
     
     
-    #  Casso recursivo 
-    # contar até 10
-    inicio += 1
-    return recursiva(inicio, fim)
+#     #  Casso recursivo 
+#     # contar até 10
+#     inicio += 1
+#     return recursiva(inicio, fim)
 
-print(recursiva())
+# print(recursiva())
+
+
+def fatorial(n):
+    if n <= 1:
+        return 1
+    
+    return n * fatorial(n - 1)
+
+
+print(fatorial(5))
