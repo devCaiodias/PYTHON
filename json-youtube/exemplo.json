@@ -1,0 +1,9 @@
+{
+    "fistnome": "Caio", 
+    "lastname": "Dias", 
+    "age": 15,
+    "addresses": [
+        { "line 1": "Perto do açai"},
+        { "line 1": "Perto do piloto"}
+    ]
+}

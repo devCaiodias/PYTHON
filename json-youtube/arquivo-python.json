@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Caio",
+    "sobrenome": "dias",
+    "idade": 18,
+    "ativo": false,
+    "nota": [
+      "A",
+      "A+"
+    ],
+    "telefone": {
+      "residencial": "00 0000-0000",
+      "celular": "00 0000-0000"
+    }
+  },
+  {
+    "nome": "vini",
+    "sobrenome": "mendz",
+    "idade": 19,
+    "ativo": true,
+    "nota": [
+      "B",
+      "B+"
+    ],
+    "telefone": {
+      "residencial": "00 1111-0000",
+      "celular": "00 1111-0000"
+    }
+  }
+]
