@@ -8,14 +8,8 @@
 # desfazer = [] -> Refazer ['caminhar', 'fazer café']
 # refazer = todo ['fazer café']
 # refazer = todo ['fazer café', 'caminhar']
-
+import json
 import os
-
-def add_tarefas(tarefa, lista=None):
-    if lista is not None:
-        lista = []
-    lista.append(tarefa)
-    return lista
 
 tarefa = []
 tarefa_refazer = []
@@ -43,8 +37,18 @@ while True:
             tarefaa = tarefa_refazer.pop()
             tarefa.append(tarefaa)
     else:
-        tarefa.append(tarefa_e_comendo)
         
+        tarefa.append(tarefa_e_comendo)
+        caminho_arquivo = 'C:\\Users\\caiod\\pyhard\\excicio\\'
+        caminho_arquivo += 'ex0010_py.json'
+        
+        with open(caminho_arquivo, 'w', encoding='utf8') as file:
+            json.dump(tarefa,
+                      file,
+                      indent=2,
+                      ensure_ascii=False
+                      )
+            
     print()
     print('TAREFAS:')
     for t in tarefa:
