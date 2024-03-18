@@ -18,6 +18,7 @@ def add_tarefas(tarefa, lista=None):
     return lista
 
 tarefa = []
+tarefa_refazer = []
 while True: 
     print('Comandos: listar, desfazer, refazer')
     tarefa_e_comendo = str(input('Dijite uma tarefa ou comando: '))
@@ -27,10 +28,20 @@ while True:
     if tarefa_e_comendo == 'listar':
         if tarefa == []:
             print('N tem nada na lista')
+            
     elif tarefa_e_comendo == 'desfazer':
-        tarefa_removida = tarefa.pop()
+        if not tarefa:
+            print('Nenhuma tarefa para desfazer')
+        else:
+            tarefaa = tarefa.pop()
+            tarefa_refazer.append(tarefaa)
+        
     elif tarefa_e_comendo == 'refazer':
-        tarefa.append(tarefa_removida)
+        if not tarefa_refazer:
+            print('Nenhuma tarefa para refazer')
+        else:
+            tarefaa = tarefa_refazer.pop()
+            tarefa.append(tarefaa)
     else:
         tarefa.append(tarefa_e_comendo)
         
@@ -39,3 +50,4 @@ while True:
     for t in tarefa:
         print(t)
     print()
+    
